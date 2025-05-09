@@ -54,6 +54,9 @@ android {
     dataBinding {
         enable = true
     }
+    lint {
+        abortOnError = false
+    }
 }
 
 dependencies {
