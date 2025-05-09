@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="packet"
+            type="com.example.isa.domain.entity.local.database.PacketNegotiation" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Верхний AppBar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/button"
+                    android:padding="@dimen/btn_menu_padding"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_toolbar_title_margin_start"
+                    android:layout_marginEnd="@dimen/main_toolbar_title_margin_end"
+                    android:background="@android:color/transparent"
+                    android:text="@{TextUtils.isEmpty(String.valueOf(packet.packId)) ? `-` : String.valueOf(packet.packId)}"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/main_toolbar_title_text_size"
+                    tools:text="12345" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Основной контент -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Name Packet -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_name_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_name_packet_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_name_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(packet.packName) ? `-` : packet.packName}"
+                            tools:text="tests ffdsfs dasda  dasa" />
+                    </LinearLayout>
+
+                    <!-- Number -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_number_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_number_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_number_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(String.valueOf(packet.packId)) ? `-` : String.valueOf(packet.packId)}"
+                            tools:text="123456" />
+                    </LinearLayout>
+
+                    <!-- Development -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_development_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_development_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_development_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(packet.urcDevSNM) ? `-` : packet.urcDevSNM}"
+                            tools:text="Иванов И.И." />
+                    </LinearLayout>
+
+                    <!-- Supervisor -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_supervisor_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_supervisor_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_supervisor_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(packet.urcLeadDevSNM) ? `-` : packet.urcLeadDevSNM}"
+                            tools:text="Иванов И.И." />
+                    </LinearLayout>
+
+                    <!-- Task Activation -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_task_activation_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_task_activation_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_task_activation_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(String.valueOf(packet.blockingTaskList)) ? `-` : String.valueOf(packet.blockingTaskList)}"
+                            tools:text="safhdsalkhfsahflksa" />
+                    </LinearLayout>
+
+                    <!-- Task Max Pack Change -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_task_max_pack_change_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_task_activation_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_task_max_pack_change_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(String.valueOf(packet.maxPackChangeSnm)) ? `-` : String.valueOf(packet.maxPackChangeSnm)}"
+                            android:textColor="@color/colorLevelChange"
+                            tools:text="доработка" />
+                    </LinearLayout>
+
+                    <!-- Creation Time -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_creation_time_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_time_create_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_creation_time_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(packet.tsCreate) ? `-` : packet.tsCreate}"
+                            tools:text="12.05.2023 14:30" />
+                    </LinearLayout>
+
+                    <!-- Processing Start -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_processing_start_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_time_for_processing_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_processing_start_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(packet.tsSend) ? `-` : packet.tsSend}"
+                            tools:text="12.05.2023 15:00" />
+                    </LinearLayout>
+
+                    <!-- Processing Time -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_processing_time_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_time_processing_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_processing_time_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="2"
+                            android:text="@{TextUtils.isEmpty(packet.urcSignTime) ? `-` : packet.urcSignTime}"
+                            tools:text="12.05.2023 16:45" />
+                    </LinearLayout>
+
+                    <!-- Version Status -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_version_status_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_version_status_packet_negotiation" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_version_status_value"
+                                style="@style/StatusPacketStyle"
+                                android:maxLines="2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Description -->
+                    <LinearLayout
+                        style="@style/TableRowStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_description_label"
+                            style="@style/LabelTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/title_description_packet_negotiation" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_description_value"
+                            style="@style/ValueTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:maxLines="4"
+                            android:text="@{TextUtils.isEmpty(packet.packDescription) ? `-` : packet.packDescription}"
+                            tools:text="Полное описание пакета согласования со всеми деталями и примечаниями" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <!-- Нижний AppBar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/popup_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/popup_menu_tolbar_buttom_margin"
+                    android:layout_marginEnd="@dimen/popup_menu_tolbar_buttom_margin"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/button"
+                    android:padding="@dimen/btn_menu_padding"
+                    android:src="@drawable/ic_approve"
+                    android:tint="@color/colorBlack" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/packet_negotiation_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/card_view_margin_start"
+    android:layout_marginTop="@dimen/card_view_margin_top"
+    android:layout_marginEnd="@dimen/card_view_margin_end"
+    android:layout_marginBottom="@dimen/card_view_margin_bottom"
+    app:cardCornerRadius="@dimen/card_view_radius"
+    app:cardPreventCornerOverlap="false"
+    app:contentPadding="@dimen/card_view_content_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/data_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="6dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/number_packet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="208682" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/status_packet"
+            style="@style/StatusPacketStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/number_packet"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/number_packet">
+
+            <!-- Name Packet -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_name_packet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/title_name_packet_packet_negotiation"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name_packet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:maxLines="2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    tools:text="tests tests testssts tests tests" />
+            </LinearLayout>
+
+            <!-- Development -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_development"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/title_development_packet_negotiation"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/development"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    tools:text="user" />
+            </LinearLayout>
+
+            <!-- Task Activation -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_task_activation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/title_task_activation_packet_negotiation"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/task_activation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    tools:text="1232312" />
+            </LinearLayout>
+
+            <!-- Level of Change -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_lavel_of_change"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/title_lavel_of_change_packet_negotiation"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/level_change"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/colorLevelChange"
+                    android:textSize="@dimen/text_size"
+                    tools:text="доработка" />
+            </LinearLayout>
+
+            <!-- Task -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_task"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/title_task_packet_negotiation"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/text_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/task"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size"
+                    tools:text="1312312" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/approve_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_approve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

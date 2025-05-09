@@ -1,0 +1,86 @@
+[versions]
+agp = "8.5.1"
+kotlin = "1.9.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+constraintlayout = "2.1.4"
+lifecycleLivedataKtx = "+"
+lifecycleViewmodelKtx = "2.2.0"
+navigationFragmentKtx = "2.8.4"
+navigationUiKtx = "2.8.4"
+navigationSafargs = "2.8.4"
+annotation = "1.2.0"
+legacySupport = "1.0.0"
+moxy = "1.5.5"
+materialDialog = "0.9.6.0"
+materialedittext = "2.1.4"
+rxjava = "2.2.13"
+rxandroid = "2.1.1"
+rxbinding2 = "2.0.0"
+rxpermissions = "0.10.2"
+dagger = "2.28.3"
+daggerAndroid = "2.19"
+retrofit = "2.6.1"
+converterGson = "2.5.0"
+adapterRxjava = "2.2.0"
+retrofit2Rxjava2Adapter = "1.0.0"
+loggingInterceptor = "4.2.2"
+room = "2.2.3"
+timber = "4.7.1"
+activity = "1.8.0"
+glide = "4.9.0"
+zxing = "4.3.0"
+zxing-core = "3.3.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-lifecycle-lifecycle-extensions-ktx = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycleViewmodelKtx" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+androidx-annotation-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+android-legacy-support = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupport" }
+com-arello-mobile-moxy = { group = "com.arello-mobile", name = "moxy", version.ref = "moxy" }
+com-arello-mobile-moxy-compiler = { group = "com.arello-mobile", name = "moxy-compiler", version.ref = "moxy" }
+com-afollestad-material-dialogs = { group = "com.afollestad.material-dialogs", name = "core", version.ref = "materialDialog" }
+com-rengwuxian-materialedittext-library = { group = "com.rengwuxian.materialedittext", name = "library", version.ref = "materialedittext" }
+com-jakewharton-rxbinding2 = { group = "com.jakewharton.rxbinding2", name = "rxbinding-appcompat-v7", version.ref = "rxbinding2" }
+com-github-tbruyelle = { group = "com.github.tbruyelle", name = "rxpermissions", version.ref = "rxpermissions" }
+io-reactivex-rxjava2 = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava" }
+io-reactivex-rxjava2-rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroid" }
+com-google-dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+com-google-dagger-android = { group = "com.google.dagger", name = "dagger-android", version.ref = "daggerAndroid" }
+com-google-dagger-android-support = { group = "com.google.dagger", name = "dagger-android-support", version.ref = "daggerAndroid" }
+com-google-dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "daggerAndroid" }
+com-google-dagger-processor = { group = "com.google.dagger", name = "dagger-android-processor", version.ref = "daggerAndroid" }
+com-squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+com-squareup-retrofit2-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "converterGson" }
+com-squareup-retrofit2-adapter-rxjava = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "adapterRxjava" }
+com-jakewharton-retrofit-retrofit2-rxjava2-adapter = { group = "com.jakewharton.retrofit", name = "retrofit2-rxjava2-adapter", version.ref = "retrofit2Rxjava2Adapter" }
+com-squareup-okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-rxjava2 = { group = "androidx.room", name = "room-rxjava2", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+com-jakewharton-timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+com-github-bumptech = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+com-github-bumptech-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+com-journeyapps = { group = "com.journeyapps", name = "zxing-android-embedded", version.ref = "zxing" }
+com-google-zxing = { group = "com.google.zxing", name = "core", version.ref = "zxing-core" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+androidx-navigation-safargs = { id = "androidx.navigation.safeargs", version.ref = "navigationSafargs" }

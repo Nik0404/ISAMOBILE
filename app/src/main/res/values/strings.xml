@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">ISAMobile</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--    Ошибки-->
+    <string name="error_message">Произошла ошибка</string>
+    <string name="password_out_of_date">Пароль пользователя устарел</string>
+    <string name="user_loading_error_message">Ошибка загрузки пользователя</string>
+    <string name="data_loading_error_message">Ошибка в получении данных</string>
+    <!--    Прочие-->
+    <string name="go_to">Перейти</string>
+    <string name="app_version">v.%s</string>
+    <string name="login_fields_empty">Заполните поля для ввода</string>
+    <string name="button">Button</string>
+    <string name="rework">Доработка</string>
+    <!--    login_window-->
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="btn_sign">Войти</string>
+    <!--    menu-->
+    <string name="menu_header_main">Моя страница</string>
+    <string name="menu_packet_negotiation">Согласование пакетов</string>
+    <string name="menu_develepment_and_update_isa">Разработка ИСА</string>
+    <string name="menu_coordination_update_data">Согласование заявок</string>
+    <string name="logout">Выйти</string>
+    <!--    under the menu-->
+    <string name="under_menu_package_content">Содержимое пакета</string>
+    <string name="under_menu_package_base">Основание пакета</string>
+    <string name="under_menu_package_function">Список функций</string>
+    <!--    main_window-->
+    <string name="item_icon_user">Моя страница:</string>
+    <string name="tpersonnel_number">Табельный номер:</string>
+    <string name="department">Подразделение:</string>
+    <string name="job_title">Должность:</string>
+    <string name="phone">Телефон:</string>
+    <string name="mail">Почта:</string>
+    <string name="document_for_signature">Документы на подпись</string>
+    <!--    packet_negotiation_window-->
+    <string name="title_task_packet_negotiation">Задание (код):</string>
+    <string name="title_lavel_of_change_packet_negotiation">Уровень изменений:</string>
+    <string name="title_task_activation_packet_negotiation">Блок актив задания:</string>
+    <string name="title_development_packet_negotiation">Разработчик:</string>
+    <string name="title_name_packet_packet_negotiation">Наименование:</string>
+    <string name="status_packet_negotiation">Передан на актив.</string>
+    <string name="packet_negotiation_text">Соглосовать</string>
+    <string name="no_packet_negotiation_text">Вернуть</string>
+    <!--    packet_negotiation_detail-->
+    <string name="title_number_packet_negotiation">Номер:</string>
+    <string name="title_supervisor_packet_negotiation">Руководитель:</string>
+    <string name="title_time_create_packet_negotiation">Время создания:</string>
+    <string name="title_time_for_processing_packet_negotiation">Время передачи на обработку:</string>
+    <string name="title_time_processing_packet_negotiation">Время обработки:</string>
+    <string name="title_version_status_packet_negotiation">Состояние версии:</string>
+    <string name="title_description_packet_negotiation">Описание:</string>
+    <!--    popup меню-->
+    <string name="menu_package_content">Содержимое пакета</string>
+    <string name="menu_package_base">Основание пакета</string>
+    <!--    packet_contents-->
+    <string name="title_name_packet_content">Имя:</string>
+    <string name="title_type_packet_content">Тип:</string>
+    <string name="title_heading_packet_content">Зоголовок:</string>
+    <string name="title_version_packet_content">Версия:</string>
+    <string name="title_subsystem_packet_content">Подсистема:</string>
+    <string name="title_development_packet_content">Разработчик:</string>
+    <string name="title_status_packet_content">Статус:</string>
+    <string name="title_time_publication_packet_content">Время публикации:</string>
+    <!--    packet_base-->
+    <string name="title_name_task_base">Номер задания:</string>
+    <string name="title_doc_base">Документ основание:</string>
+    <string name="title_status_base">Статус:</string>
+    <string name="title_date_task_base">Дата задания:</string>
+    <string name="title_name_base">Наименование:</string>
+    <string name="title_tester_base">Тестировщик:</string>
+    <string name="title_signed_base">Подписал:</string>
+    <string name="title_customer_of_the_service_base">Служба-заказчик:</string>
+    <string name="title_thema_base">Тема:</string>
+    <string name="title_curator_base">Куратор:</string>
+    <string name="title_batton_list_function">список функций</string>
+    <!--    packet_function_list-->
+    <string name="title_type_function">Тип функции:</string>
+    <string name="title_development_isa">Разработка для web иса:</string>
+    <string name="title_isa_2005">ИСА 2005:</string>
+    <string name="title_isa_2010">ИСА 2010:</string>
+    <string name="title_isa_web">ИСА web:</string>
+</resources>

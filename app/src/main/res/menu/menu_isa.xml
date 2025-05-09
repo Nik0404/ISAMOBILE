@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/myPageFragment"
+            android:title="@string/menu_header_main" />
+        <item
+            android:id="@+id/packetNegotiationFragment"
+            android:title="@string/menu_packet_negotiation" />
+        <item
+            android:id="@+id/nav_develepment_isa"
+            android:title="@string/menu_develepment_and_update_isa" />
+        <item
+            android:id="@+id/nav_coordination_update_data"
+            android:title="@string/menu_coordination_update_data" />
+    </group>
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/logout"
+            android:title="@string/logout" />
+    </group>
+
+</menu>

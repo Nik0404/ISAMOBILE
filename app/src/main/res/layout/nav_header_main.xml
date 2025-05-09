@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.isa.domain.entity.local.database.User" />
+    </data>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:paddingTop="@dimen/menu_header_padding_top">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/menu_header_tv_name_margin_start"
+            android:contentDescription="@string/item_icon_user"
+            android:src="@drawable/ic_main_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/menu_header_tv_name_margin_start"
+            android:layout_marginEnd="@dimen/menu_header_tv_name_margin_end"
+            android:drawablePadding="@dimen/menu_header_tv_name_drawable_padding"
+            android:fontFamily="sans-serif-medium"
+            android:text='@{user.surname + " " + user.name + " " + user.thirdName}'
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/menu_header_user_name_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Иванов Иван\nИванович" />
+
+        <View
+            android:id="@+id/header_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_header_divider_height"
+            android:layout_marginTop="@dimen/menu_header_divider_margin_top"
+            android:background="@color/colorDivider"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

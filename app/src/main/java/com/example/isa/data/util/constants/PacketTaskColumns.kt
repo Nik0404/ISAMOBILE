@@ -1,0 +1,59 @@
+package com.example.isa.data.util.constants
+
+object PacketTaskColumns {
+    const val ID_COLUMN_NAME = "ID_TASK"
+    const val ID_COLUMN_POSITION = -1
+
+    const val TASK_ID_COLUMN_NAME = "ID_TASK"
+    const val TASK_ID_COLUMN_POSITION = 0
+
+    const val DOC_INCOMING_COLUMN_NAME = "DOC_INCOMING_NUMBER_FULL"
+    const val DOC_INCOMING_COLUMN_POSITION = 2
+
+    const val NAME_TASK_COLUMN_NAME = "NAME_TASK"
+    const val NAME_TASK_COLUMN_POSITION = 3
+
+    const val DATE_TASK_TR_COLUMN_NAME = "DATE_TASK_TR"
+    const val DATE_TASK_TR_COLUMN_POSITION = 4
+
+    const val CLIENT_DEVAP_NAME_COLUMN_NAME = "CLIENT_DEVAPP_NAME"
+    const val CLIENT_DEVAP_NAME_COLUMN_POSITION = 5
+
+    const val DOC_REGISTRY_NAME_COLUMN_NAME = "DOC_REGISTRY_NAME"
+    const val DOC_REGISTRY_NAME_COLUMN_POSITION = 6
+
+    const val CURATOR_NAME_COLUMN_NAME = "CURATOR_KI_FNM"
+    const val CURATOR_NAME_COLUMN_POSITION = 7
+
+    const val DEV_NAME_COLUMN_NAME = "DEV_KI_FNM"
+    const val DEV_NAME_COLUMN_POSITION = 8
+
+    const val TST_NAME_COLUMN_NAME = "TST_KI_FNM"
+    const val TST_NAME_COLUMN_POSITION = 9
+
+    const val NAME_STATE_TASK_NAME = "NAME_STATE_TASK"
+    const val NAME_STATE_TASK_POSITION = 10
+
+    const val DOC_SENDER_COMMITTER_COLUMN_NAME = "DOC_SENDER_COMMITTER"
+    const val DOC_SENDER_COMMITTER_COLUMN_POSITION = 11
+
+    const val MEMO_TASK_COLUMN_NAME = "MEMO_TASK"
+    const val MEMO_TASK_COLUMN_POSITION = 12
+
+    fun getColumns(): List<String> {
+        return listOf(
+            TASK_ID_COLUMN_NAME,
+            DOC_INCOMING_COLUMN_NAME,
+            NAME_TASK_COLUMN_NAME,
+            DATE_TASK_TR_COLUMN_NAME,
+            CLIENT_DEVAP_NAME_COLUMN_NAME,
+            DOC_REGISTRY_NAME_COLUMN_NAME,
+            CURATOR_NAME_COLUMN_NAME,
+            DEV_NAME_COLUMN_NAME,
+            TST_NAME_COLUMN_NAME,
+            NAME_STATE_TASK_NAME,
+            DOC_SENDER_COMMITTER_COLUMN_NAME,
+            MEMO_TASK_COLUMN_NAME
+        )
+    }
+}

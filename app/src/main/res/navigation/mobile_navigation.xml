@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/myPageFragment">
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.isa.presentation.activity.login.LoginActivity"
+        android:label="LoginActivity"
+        tools:layout="@layout/fragment_login" />
+
+    <action
+        android:id="@+id/action_global_my_page"
+        app:destination="@+id/myPageFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_packet_negotiation"
+        app:destination="@+id/packetNegotiationFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/myPageFragment" />
+
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.example.isa.presentation.fragment.mypage.MyPageFragment"
+        android:label="MyPageFragment"
+        tools:layout="@layout/fragment_my_page">
+        <action
+            android:id="@+id/action_myPageFragment_to_packetNegotiationFragment"
+            app:destination="@id/packetNegotiationFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/packetNegotiationFragment"
+        android:name="com.example.isa.presentation.fragment.packetnegotiation.PacketNegotiationFragment"
+        android:label="PacketNegotiationFragment"
+        tools:layout="@layout/fragment_packet_negotiation">
+        <action
+            android:id="@+id/action_packetNegotiationFragment_to_packetNegotiationDetailsFragment"
+            app:destination="@+id/packetNegotiationDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/packetNegotiationDetailsFragment"
+        android:name="com.example.isa.presentation.fragment.packetnegotiation.infopacket.PacketNegotiationDetailFragment"
+        android:label="PacketNegotiationDetailFragment"
+        tools:layout="@layout/fragment_packet_negotiation_detail">
+        <action
+            android:id="@+id/action_packetNegotiationDetailsFragment_to_packetNegotiationContentFragment"
+            app:destination="@id/packetNegotiationContentFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_packetNegotiationDetailsFragment_to_packetNegotiationBaseFragment"
+            app:destination="@id/packetNegotiationBaseFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/packetNegotiationContentFragment"
+        android:name="com.example.isa.presentation.fragment.packetnegotiation.contentpacket.PacketContentFragment"
+        android:label="PacketNegotiationContentFragment"
+        tools:layout="@layout/fragment_packet_content" />
+    <fragment
+        android:id="@+id/packetNegotiationBaseFragment"
+        android:name="com.example.isa.presentation.fragment.packetnegotiation.taskpacket.PacketBaseFragment"
+        android:label="PacketNegotiationBaseFragment"
+        tools:layout="@layout/fragment_packet_task">
+        <action
+            android:id="@+id/action_packetNegotiationBaseFragment_to_packetTaskDetailsFragment"
+            app:destination="@id/packetTaskDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/packetTaskDetailsFragment"
+        android:name="com.example.isa.presentation.fragment.packetnegotiation.taskpacket.infotaskpacket.PacketTaskDetailFragment"
+        android:label="PacketTaskDetailFragment"
+        tools:layout="@layout/fragment_packet_task_detail">
+
+        <action
+            android:id="@+id/action_packetTaskDetailsFragment_to_functionPacketFragment"
+            app:destination="@id/functionPacketFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/functionPacketFragment"
+        android:name="com.example.isa.presentation.fragment.packetnegotiation.taskpacket.functionpacket.FunctionPacketFragment"
+        android:label="FunctionPacketFragment"
+        tools:layout="@layout/fragment_function_packet">
+
+    </fragment>
+</navigation>

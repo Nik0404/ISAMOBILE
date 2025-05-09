@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/packet_negotiation"
+        android:title="@string/packet_negotiation_text" />
+    <item
+        android:id="@+id/package_content"
+        android:title="@string/menu_package_content" />
+    <item
+        android:id="@+id/package_base"
+        android:title="@string/menu_package_base" />
+</menu>

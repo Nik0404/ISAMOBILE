@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/packet_negotiation_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/card_view_margin_start"
+    android:layout_marginTop="@dimen/card_view_margin_top"
+    android:layout_marginEnd="@dimen/card_view_margin_end"
+    android:layout_marginBottom="@dimen/card_view_margin_bottom"
+    app:cardCornerRadius="@dimen/card_view_radius"
+    app:cardPreventCornerOverlap="false"
+    app:contentPadding="@dimen/card_view_content_padding">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_name_task_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/title_name_task_base"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_packet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:maxLines="2"
+                android:paddingStart="@dimen/text_view_padding_left"
+                android:paddingEnd="@dimen/text_view_padding_left"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                tools:text="tests tests testssts tests tests" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_doc_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/title_doc_base"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/doc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:paddingStart="@dimen/text_view_padding_left"
+                android:paddingEnd="@dimen/text_view_padding_left"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                tools:text="user" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_status_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/title_status_base"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:paddingStart="@dimen/text_view_padding_left"
+                android:paddingEnd="@dimen/text_view_padding_left"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                tools:text="1232312" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_date_task_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/title_date_task_base"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/data_task"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:paddingStart="@dimen/text_view_padding_left"
+                android:paddingEnd="@dimen/text_view_padding_left"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                tools:text="доработка" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_name_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/title_name_base"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_task"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:paddingStart="@dimen/text_view_padding_left"
+                android:paddingEnd="@dimen/text_view_padding_left"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                tools:text="1312312" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_tester_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/title_tester_base"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:paddingStart="@dimen/text_view_padding_left"
+                android:paddingEnd="@dimen/text_view_padding_left"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                tools:text="1312312" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_signed_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/title_signed_base"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/committer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:paddingStart="@dimen/text_view_padding_left"
+                android:paddingEnd="@dimen/text_view_padding_left"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"
+                tools:text="1312312" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

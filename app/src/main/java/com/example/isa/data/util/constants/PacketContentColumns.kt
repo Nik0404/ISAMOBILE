@@ -1,0 +1,136 @@
+package com.example.isa.data.util.constants
+
+object PacketContentColumns {
+    const val PACK_ITEM_ID_COLUMN_NAME = "PACK_ITEM_ID"
+    const val PACK_ITEM_ID_COLUMN_POSITION = 0
+
+    const val COMPONENT_HEAD_ID_COLUMN_NAME = "COMPONENT_HEAD_ID"
+    const val COMPONENT_HEAD_ID_COLUMN_POSITION = 1
+
+    const val COMPONENT_ID_COLUMN_NAME = "COMPONENT_ID"
+    const val COMPONENT_ID_COLUMN_POSITION = 2
+
+    const val COMPONENT_TYPE_COLUMN_NAME = "COMPONENT_TYPE"
+    const val COMPONENT_TYPE_COLUMN_POSITION = 3
+
+    const val COMPONENT_TYPE_FNM_COLUMN_NAME = "COMPONENT_TYPE_FNM"
+    const val COMPONENT_TYPE_FNM_COLUMN_POSITION = 4
+
+    const val COMPONENT_TYPE_SNM_COLUMN_NAME = "COMPONENT_TYPE_SNM"
+    const val COMPONENT_TYPE_SNM_COLUMN_POSITION = 5
+
+    const val COMPONENT_SUBTYPE_COLUMN_NAME = "COMPONENT_SUBTYPE"
+    const val COMPONENT_SUBTYPE_COLUMN_POSITION = 6
+
+    const val COMPONENT_SUBTYPE_FNM_COLUMN_NAME = "COMPONENT_SUBTYPE_FNM"
+    const val COMPONENT_SUBTYPE_FNM_COLUMN_POSITION = 7
+
+    const val COMPONENT_SUBTYPE_SNM_COLUMN_NAME = "COMPONENT_SUBTYPE_SNM"
+    const val COMPONENT_SUBTYPE_SNM_COLUMN_POSITION = 8
+
+    const val PACK_ID_COLUMN_NAME = "PACK_ID"
+    const val PACK_ID_COLUMN_POSITION = 9
+
+    const val NAME_COLUMN_NAME = "NAME"
+    const val NAME_COLUMN_POSITION = 10
+
+    const val TITLE_COLUMN_NAME = "TITLE"
+    const val TITLE_COLUMN_POSITION = 11
+
+    const val VERSION_COLUMN_NAME = "VERSION"
+    const val VERSION_COLUMN_POSITION = 12
+
+    const val SUBSYSTEM_COLUMN_NAME = "SUBSYSTEM"
+    const val SUBSYSTEM_COLUMN_POSITION = 13
+
+    const val DEVELOPER_TN_COLUMN_NAME = "DEVELOPER_TN"
+    const val DEVELOPER_TN_COLUMN_POSITION = 14
+
+    const val DEVELOPER_TN_SNM_COLUMN_NAME = "DEVELOPER_TN_SNM"
+    const val DEVELOPER_TN_SNM_COLUMN_POSITION = 15
+
+    const val STATUS_COLUMN_NAME = "STATUS"
+    const val STATUS_COLUMN_POSITION = 16
+
+    const val STATUS_FNM_COLUMN_NAME = "STATUS_FNM"
+    const val STATUS_FNM_COLUMN_POSITION = 17
+
+    const val STATUS_SNM_COLUMN_NAME = "STATUS_SNM"
+    const val STATUS_SNM_COLUMN_POSITION = 18
+
+    const val DT_PUBLIC_COLUMN_NAME = "DT_PUBLIC"
+    const val DT_PUBLIC_COLUMN_POSITION = 19
+
+    const val IS_READY_TO_SEND_COLUMN_NAME = "IS_READY_TO_SEND"
+    const val IS_READY_TO_SEND_COLUMN_POSITION = 20
+
+    const val IS_READY_TO_ACTIVATE_COLUMN_NAME = "IS_READY_TO_ACTIVATE"
+    const val IS_READY_TO_ACTIVATE_COLUMN_POSITION = 21
+
+    const val FILENAME_COLUMN_NAME = "FILENAME"
+    const val FILENAME_COLUMN_POSITION = 22
+
+    const val FOLDERNAME_COLUMN_NAME = "FOLDERNAME"
+    const val FOLDERNAME_COLUMN_POSITION = 23
+
+    const val SCOPE_COLUMN_NAME = "SCOPE"
+    const val SCOPE_COLUMN_POSITION = 24
+
+    fun getColumns(): List<String> {
+        return listOf(
+            PACK_ITEM_ID_COLUMN_NAME,
+            COMPONENT_HEAD_ID_COLUMN_NAME,
+            COMPONENT_ID_COLUMN_NAME,
+            COMPONENT_TYPE_COLUMN_NAME,
+            COMPONENT_TYPE_FNM_COLUMN_NAME,
+            COMPONENT_TYPE_SNM_COLUMN_NAME,
+            COMPONENT_SUBTYPE_COLUMN_NAME,
+            COMPONENT_SUBTYPE_FNM_COLUMN_NAME,
+            COMPONENT_SUBTYPE_SNM_COLUMN_NAME,
+            PACK_ID_COLUMN_NAME,
+            NAME_COLUMN_NAME,
+            TITLE_COLUMN_NAME,
+            VERSION_COLUMN_NAME,
+            SUBSYSTEM_COLUMN_NAME,
+            DEVELOPER_TN_COLUMN_NAME,
+            DEVELOPER_TN_SNM_COLUMN_NAME,
+            STATUS_COLUMN_NAME,
+            STATUS_FNM_COLUMN_NAME,
+            STATUS_SNM_COLUMN_NAME,
+            DT_PUBLIC_COLUMN_NAME,
+            IS_READY_TO_SEND_COLUMN_NAME,
+            IS_READY_TO_ACTIVATE_COLUMN_NAME,
+            FILENAME_COLUMN_NAME,
+            FOLDERNAME_COLUMN_NAME,
+            SCOPE_COLUMN_NAME
+        )
+    }
+
+    fun getBasicInfoColumns(): List<String> {
+        return listOf(
+            PACK_ID_COLUMN_NAME,
+            NAME_COLUMN_NAME,
+            COMPONENT_TYPE_SNM_COLUMN_NAME,
+            VERSION_COLUMN_NAME,
+            SUBSYSTEM_COLUMN_NAME,
+            DEVELOPER_TN_COLUMN_NAME,
+            STATUS_SNM_COLUMN_NAME,
+            DT_PUBLIC_COLUMN_NAME
+        )
+    }
+
+    fun getFileInfoColumns(): List<String> {
+        return listOf(
+            FILENAME_COLUMN_NAME,
+            FOLDERNAME_COLUMN_NAME
+        )
+    }
+
+    fun getStatusColumns(): List<String> {
+        return listOf(
+            STATUS_COLUMN_NAME,
+            STATUS_FNM_COLUMN_NAME,
+            STATUS_SNM_COLUMN_NAME
+        )
+    }
+}

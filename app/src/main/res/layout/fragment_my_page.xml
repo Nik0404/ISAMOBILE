@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.isa.domain.entity.local.database.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/button"
+                    android:padding="@dimen/btn_menu_padding"
+                    android:src="@drawable/ic_menu" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main_toolbar_title_margin_start"
+                    android:layout_marginEnd="@dimen/main_toolbar_title_margin_end"
+                    android:background="@android:color/transparent"
+                    android:text="@string/menu_header_main"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/main_toolbar_title_text_size" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_login_card_view_horizontal_padding"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{user.surname + " " + user.name + " " + user.thirdName}'
+                    android:textColor="@color/colorBlack"
+                    tools:text="Иванов Иван Иванович" />
+
+                <!-- Табельный номер -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tn_numer_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:text="@string/tpersonnel_number"
+                        android:textColor="@color/colorGray" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tn_numer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/my_page_margin_start"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:layout_weight="1"
+                        android:text='@{user.login}'
+                        android:textColor="@color/colorBlack"
+                        tools:text="123456" />
+                </LinearLayout>
+
+                <!-- Подразделение -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/department_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:text="@string/department"
+                        android:textColor="@color/colorGray" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/department"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/my_page_margin_start"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:layout_weight="1"
+                        android:text='@{user.department}'
+                        android:textColor="@color/colorBlack"
+                        tools:text="IT-отдел" />
+                </LinearLayout>
+
+                <!-- Должность -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/job_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:text="@string/job_title"
+                        android:textColor="@color/colorGray" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/job"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/my_page_margin_start"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:layout_weight="1"
+                        android:text='@{user.post}'
+                        android:textColor="@color/colorBlack"
+                        tools:text="Разработчик" />
+                </LinearLayout>
+
+                <!-- Телефон -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/phone_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:text="@string/phone"
+                        android:textColor="@color/colorGray" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/my_page_margin_start"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:layout_weight="1"
+                        android:text='@{user.phone}'
+                        android:textColor="@color/colorBlack"
+                        tools:text="+7 (900) 123-45-67" />
+                </LinearLayout>
+
+                <!-- Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:text="@string/mail"
+                        android:textColor="@color/colorGray" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/my_page_margin_start"
+                        android:layout_marginTop="@dimen/my_page_margin_top_five"
+                        android:layout_weight="1"
+                        android:text='@{user.email}'
+                        android:textColor="@color/colorBlack"
+                        tools:text="example@company.com" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/doc_signature_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="@dimen/my_page_doc_signature_button_width"
+                    android:layout_height="@dimen/my_page_doc_signature_button_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/my_page_doc_signature_button_margin_top"
+                    android:background="@drawable/button_green_background"
+                    android:text="@string/document_for_signature"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
